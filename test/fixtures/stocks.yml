@@ -5,9 +5,11 @@ one:
   name: MyString
   price: MyString
   exchange: MyString
+  portfolio: one
 
 two:
   symbol: MyString
   name: MyString
   price: MyString
   exchange: MyString
+  portfolio: two
