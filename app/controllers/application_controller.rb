@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::API
 
     def encode_token(payload)
-        JWT.encode(payload, 'fake instagram')
+        JWT.encode(payload, 'stocks app')
     end
 
     def auth_header
@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
         if auth_header
             token = auth_header.split(' ')[1]
             begin
-                JWT.decode(token, 'fake instagram', true, algorithm: 'HS256')
+                JWT.decode(token, 'stocks app', true, algorithm: 'HS256')
             rescue JWT::DecodeError
                 nil
             end
