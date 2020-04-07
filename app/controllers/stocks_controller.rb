@@ -10,6 +10,13 @@ class StocksController < ApplicationController
         render json: @stock
     end
 
+    def destroy
+        @stock = Stock.find(params[:id])
+        @stock.destroy
+        @stocks = Stock.all
+        render json: @stocks
+    end
+
     private
 
     def stock_params
