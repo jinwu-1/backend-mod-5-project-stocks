@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_134514) do
   enable_extension "plpgsql"
 
   create_table "portfolios", force: :cascade do |t|
-    t.string "description"
+    t.string "name"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
