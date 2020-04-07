@@ -10,13 +10,10 @@
 user1 = User.create(username: "asdf", password: "asdf", first_name: "Mc", last_name: "Donalds", cash: "1000")
 user2 = User.create(username: "qwerty", password: "asdf", first_name: "Burger", last_name: "King", cash: "1000")
 
-portfolio1 = Portfolio.create(name: "Tech Stocks", user_id: user1.id)
-portfolio2 = Portfolio.create(name: "Random Stocks", user_id: user2.id)
-
-stock1 = Stock.create(symbol: "AAPL", name: "Apple Inc.", price: "241.41", exchange: "Nasdaq Global Select", portfolio_id: portfolio1.id)
-stock2 = Stock.create(symbol: "MSFT", name: "Microsoft Corporation", price: "153.83", exchange: "Nasdaq Global Select", portfolio_id: portfolio1.id)
-stock3 = Stock.create(symbol: "SNAP", name: "Snap Inc. Class A", price: "11.475", exchange: "New York Stock Exchange", portfolio_id: portfolio2.id)
-stock4 = Stock.create(symbol: "WFC", name: "Wells Fargo & Company", price: "27.83", exchange: "New York Stock Exchange", portfolio_id: portfolio2.id)
-stock5 = Stock.create(symbol: "NKE", name: "Nike Inc.", price: "82.62", exchange: "New York Stock Exchange", portfolio_id: portfolio2.id)
+stock1 = Stock.create(symbol: "AAPL", name: "Apple Inc.", price: "241.41", exchange: "Nasdaq Global Select", user_id: user1.id)
+stock2 = Stock.create(symbol: "MSFT", name: "Microsoft Corporation", price: "153.83", exchange: "Nasdaq Global Select", user_id: user1.id)
+stock3 = Stock.create(symbol: "SNAP", name: "Snap Inc. Class A", price: "11.475", exchange: "New York Stock Exchange", user_id: user2.id)
+stock4 = Stock.create(symbol: "WFC", name: "Wells Fargo & Company", price: "27.83", exchange: "New York Stock Exchange", user_id: user2.id)
+stock5 = Stock.create(symbol: "NKE", name: "Nike Inc.", price: "82.62", exchange: "New York Stock Exchange", user_id: user2.id)
 
 puts "Done"

@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :username, :first_name, :last_name, :cash
-  has_one :portfolio
+  has_many :stocks
 end

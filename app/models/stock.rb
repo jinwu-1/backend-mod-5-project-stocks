@@ -1,4 +1,3 @@
 class Stock < ApplicationRecord
-  belongs_to :portfolio
-  validates_presence_of :portfolio_id
+  belongs_to :user
 end

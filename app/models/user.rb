@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_one :portfolio
+    has_many :stocks
 
     validates :username, uniqueness: { case_sensitive: false}
     validates :username, length: { minimum: 4 }
